@@ -4,9 +4,9 @@ LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://COPYRIGHT.txt;md5=409eb13b66f123be3c9ca55334bdf9bb"
 
 
-DEPENDS = " libsdl2 libsdl2-image"
+DEPENDS_append = " libsdl2 libsdl2-image"
 BRANCH = "master"
-SRCREV = "aa46d7f90418affed8b83a3881fc884155246b78"
+SRCREV = "16f7817453c4979886ec14047407086a2bcd2997"
 SRC_URI = "git://git@bitbucket.org/guster32/sdltutorial.git;protocol=ssh;branch=master"
 
 S = "${WORKDIR}/git"
