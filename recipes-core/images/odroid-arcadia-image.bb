@@ -10,8 +10,14 @@ inherit core-image distro_features_check extrausers
 REQUIRED_DISTRO_FEATURES = " directfb alsa libsdl2 libsdl2-image"
 
 
-IMAGE_INSTALL_append += "${@bb.utils.contains('MACHINE', 'odroid-xu4', ' odroid-edid mali-t62x', '', d)}"
+IMAGE_INSTALL_append += " ${@bb.utils.contains('MACHINE', 'odroid-xu4', ' odroid-edid mali-t62x', '', d)}"
+IMAGE_INSTALL_append += " sdltutorials"
 
 
-COMPATIBLE_MACHINE = "odroid-xu4|genericx86-64"
+## SDK stuff, to build extensible sdk use bitbake -c populate_sdk_ext
+SDKIMAGE_FEATURES += "staticdev-pkgs"
+SDKIMAGE_FEATURES += "dev-pkgs"
+##
+
+COMPATIBLE_MACHINE = "odroid-xu4|qemuarm"
 
