@@ -8,9 +8,9 @@ LICENSE = "MIT"
 inherit core-image distro_features_check extrausers
 
 # Networking
-CORE_IMAGE_EXTRA_INSTALL += " packagegroup-base-wifi dhcp-server dhcp-client"
-IMAGE_INSTALL_append += " kernel-module-rt2800usb kernel-module-rt2800lib"
-IMAGE_INSTALL_append += " linux-firmware"
+#CORE_IMAGE_EXTRA_INSTALL += " packagegroup-base-wifi dhcp-server dhcp-client"
+#IMAGE_INSTALL_append += " kernel-module-rt2800usb kernel-module-rt2800lib"
+#IMAGE_INSTALL_append += " linux-firmware"
 
 # Graphics and Audio
 #REQUIRED_DISTRO_FEATURES = " wayland alsa alsa-lib pulseaudio libsdl2 libsdl2-image"
@@ -34,5 +34,5 @@ IMAGE_INSTALL_append += " sdltutorials"
 SDKIMAGE_FEATURES += "staticdev-pkgs"
 SDKIMAGE_FEATURES += "dev-pkgs"
 
-COMPATIBLE_MACHINE = "odroid-xu4|qemuarm|rockpi-4-rk3399i|jetson-nano-qspi-sd"
+COMPATIBLE_MACHINE = "odroid-xu4|qemuarm|qemux86-64|rockpi-4-rk3399i|jetson-nano-qspi-sd"
 
