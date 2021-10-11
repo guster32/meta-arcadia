@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../hello-rs"
+		},
+		{
+			"path": "../../yoctoproject/poky/build/conf"
+		},
+		{
+			"path": "../meta-odroid"
+		}
+	],
+	"settings": {}
+}
