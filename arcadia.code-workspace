@@ -7,10 +7,10 @@
 			"path": "../hello-rs"
 		},
 		{
-			"path": "../../yoctoproject/poky/build/conf"
+			"path": "../meta-odroid"
 		},
 		{
-			"path": "../meta-odroid"
+			"path": "../glplay-rs"
 		}
 	],
 	"settings": {}
