@@ -8,12 +8,12 @@ inherit cargo
 # how to get glplay-rs could be as easy as but default to a git checkout:
 # SRC_URI += "crate://crates.io/glplay-rs/0.1.0"
 SRC_URI += "git://git@github.com/guster32/glplay-rs.git;protocol=ssh;nobranch=1;branch=main"
-SRCREV = "78f3bdf6b6411edd965397c6b6c5a1d39aadcce7"
+SRCREV = "045134be088a46b40952340a2d4e3468509e1c2e"
 S = "${WORKDIR}/git"
 CARGO_SRC_DIR = ""
 PV_append = ".AUTOINC+fbd18910c6"
 
-DEPENDS += ""
+CARGO_FEATURES = "dynamic"
 
 # please note if you have entries that do not begin with crate://
 # you must change them to how that package can be fetched
