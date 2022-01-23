@@ -8,7 +8,7 @@ inherit cargo
 # how to get glplay-rs could be as easy as but default to a git checkout:
 # SRC_URI += "crate://crates.io/glplay-rs/0.1.0"
 SRC_URI += "git://git@github.com/guster32/glplay-rs.git;protocol=ssh;nobranch=1;branch=main"
-SRCREV = "045134be088a46b40952340a2d4e3468509e1c2e"
+SRCREV = "ea6cb74756f5e18930b195ed76992b882c696f87"
 S = "${WORKDIR}/git"
 CARGO_SRC_DIR = ""
 PV_append = ".AUTOINC+fbd18910c6"
@@ -18,41 +18,53 @@ CARGO_FEATURES = "dynamic"
 # please note if you have entries that do not begin with crate://
 # you must change them to how that package can be fetched
 SRC_URI += " \
+    crate://crates.io/aho-corasick/0.7.18 \
+    crate://crates.io/ansi_term/0.12.1 \
+    crate://crates.io/atty/0.2.14 \
     crate://crates.io/autocfg/1.0.1 \
-    crate://crates.io/bitflags/1.2.1 \
+    crate://crates.io/bindgen/0.59.2 \
+    crate://crates.io/bitflags/1.3.2 \
     crate://crates.io/cc/1.0.72 \
+    crate://crates.io/cexpr/0.6.0 \
     crate://crates.io/cfg-if/1.0.0 \
-    crate://crates.io/drm/0.5.0 \
-    crate://crates.io/drm-ffi/0.2.1 \
+    crate://crates.io/clang-sys/1.3.0 \
+    crate://crates.io/clap/2.34.0 \
     crate://crates.io/drm-fourcc/2.2.0 \
-    crate://crates.io/drm-sys/0.1.2 \
-    crate://crates.io/gbm-sys/0.2.0 \
-    crate://crates.io/khronos-egl/4.1.0 \
-    crate://crates.io/libc/0.2.112 \
-    crate://crates.io/libloading/0.7.2 \
+    crate://crates.io/either/1.6.1 \
+    crate://crates.io/env_logger/0.9.0 \
+    crate://crates.io/glob/0.3.0 \
+    crate://crates.io/hermit-abi/0.1.19 \
+    crate://crates.io/humantime/2.1.0 \
+    crate://crates.io/lazy_static/1.4.0 \
+    crate://crates.io/lazycell/1.3.0 \
+    crate://crates.io/libc/0.2.113 \
+    crate://crates.io/libloading/0.7.3 \
+    crate://crates.io/log/0.4.14 \
+    crate://crates.io/memchr/2.4.1 \
     crate://crates.io/memoffset/0.6.5 \
-    crate://crates.io/nix/0.22.2 \
-    crate://crates.io/nix/0.20.2 \
+    crate://crates.io/minimal-lexical/0.2.1 \
     crate://crates.io/nix/0.23.1 \
-    crate://crates.io/winapi-i686-pc-windows-gnu/0.4.0 \
-    crate://crates.io/winapi-x86_64-pc-windows-gnu/0.4.0 \
-    crate://crates.io/winapi/0.3.9 \
-    crate://crates.io/downcast-rs/1.2.0 \
-    crate://crates.io/gbm/0.7.0 \
-    crate://crates.io/once_cell/1.9.0 \
-    crate://crates.io/pkg-config/0.3.24 \
+    crate://crates.io/nom/7.1.0 \
+    crate://crates.io/peeking_take_while/0.1.2 \
     crate://crates.io/proc-macro2/1.0.36 \
-    crate://crates.io/quote/1.0.14 \
-    crate://crates.io/smallvec/1.7.0 \
+    crate://crates.io/quote/1.0.15 \
+    crate://crates.io/regex/1.5.4 \
+    crate://crates.io/regex-syntax/0.6.25 \
+    crate://crates.io/rustc-hash/1.1.0 \
+    crate://crates.io/shlex/1.1.0 \
+    crate://crates.io/strsim/0.8.0 \
+    crate://crates.io/termcolor/1.1.2 \
+    crate://crates.io/textwrap/0.11.0 \
+    crate://crates.io/unicode-width/0.1.9 \
     crate://crates.io/unicode-xid/0.2.2 \
-    crate://crates.io/wayland-commons/0.28.6 \
-    crate://crates.io/wayland-scanner/0.28.6 \
-    crate://crates.io/wayland-server/0.28.6 \
-    crate://crates.io/wayland-sys/0.28.6 \
-    crate://crates.io/xml-rs/0.8.4 \
+    crate://crates.io/vec_map/0.8.2 \
+    crate://crates.io/version_check/0.9.4 \
+    crate://crates.io/which/4.2.2 \
+    crate://crates.io/winapi/0.3.9 \
+    crate://crates.io/winapi-i686-pc-windows-gnu/0.4.0 \
+    crate://crates.io/winapi-util/0.1.5 \
+    crate://crates.io/winapi-x86_64-pc-windows-gnu/0.4.0 \
 "
-
-
 
 # FIXME: update generateme with the real MD5 of the license file
 LIC_FILES_CHKSUM = " \
