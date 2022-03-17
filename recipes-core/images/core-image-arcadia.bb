@@ -15,7 +15,7 @@ IMAGE_FEATURES += " splash"
 #CORE_IMAGE_BASE_INSTALL += " wayland htop ldd "
 
 #SDL Test Samples
-#IMAGE_INSTALL_append += " sdltutorials"
+#IMAGE_INSTALL:append = " sdltutorials"
 
 COMPATIBLE_MACHINE = "odroid-xu4|qemuarm|qemux86-64|rockpi-4-rk3399i|jetson-nano-qspi-sd"
 

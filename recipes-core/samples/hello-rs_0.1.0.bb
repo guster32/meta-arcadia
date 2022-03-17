@@ -11,7 +11,7 @@ SRC_URI += "git://git@github.com/guster32/hello-rs.git;protocol=ssh;nobranch=1;b
 SRCREV = "271f4591adc760d9d02fa193396f06a7fe406568"
 S = "${WORKDIR}/git"
 CARGO_SRC_DIR = ""
-PV_append = ".AUTOINC+271f4591ad"
+PV:append = ".AUTOINC+271f4591ad"
 
 # please note if you have entries that do not begin with crate://
 # you must change them to how that package can be fetched
