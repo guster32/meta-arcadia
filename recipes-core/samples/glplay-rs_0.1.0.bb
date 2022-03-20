@@ -8,10 +8,10 @@ inherit cargo
 # how to get glplay-rs could be as easy as but default to a git checkout:
 # SRC_URI += "crate://crates.io/glplay-rs/0.1.0"
 SRC_URI += "git://git@github.com/guster32/glplay-rs.git;protocol=ssh;nobranch=1;branch=main"
-SRCREV = "ea6cb74756f5e18930b195ed76992b882c696f87"
+SRCREV = "d82e3a9b3dffd143cc4599b139e7436935f276cb"
 S = "${WORKDIR}/git"
 CARGO_SRC_DIR = ""
-PV_append = ".AUTOINC+fbd18910c6"
+PV:append = ".AUTOINC+fbd18910c6"
 
 CARGO_FEATURES = "dynamic"
 
@@ -20,46 +20,71 @@ CARGO_FEATURES = "dynamic"
 SRC_URI += " \
     crate://crates.io/aho-corasick/0.7.18 \
     crate://crates.io/ansi_term/0.12.1 \
+    crate://crates.io/arc-swap/1.5.0 \
     crate://crates.io/atty/0.2.14 \
-    crate://crates.io/autocfg/1.0.1 \
+    crate://crates.io/autocfg/1.1.0 \
     crate://crates.io/bindgen/0.59.2 \
     crate://crates.io/bitflags/1.3.2 \
-    crate://crates.io/cc/1.0.72 \
+    crate://crates.io/calloop/0.9.3 \
+    crate://crates.io/cc/1.0.73 \
     crate://crates.io/cexpr/0.6.0 \
     crate://crates.io/cfg-if/1.0.0 \
-    crate://crates.io/clang-sys/1.3.0 \
+    crate://crates.io/clang-sys/1.3.1 \
     crate://crates.io/clap/2.34.0 \
+    crate://crates.io/dirs-next/2.0.0 \
+    crate://crates.io/dirs-sys-next/0.1.2 \
     crate://crates.io/drm-fourcc/2.2.0 \
     crate://crates.io/either/1.6.1 \
     crate://crates.io/env_logger/0.9.0 \
+    crate://crates.io/getrandom/0.2.5 \
     crate://crates.io/glob/0.3.0 \
     crate://crates.io/hermit-abi/0.1.19 \
     crate://crates.io/humantime/2.1.0 \
+    crate://crates.io/itoa/1.0.1 \
     crate://crates.io/lazy_static/1.4.0 \
     crate://crates.io/lazycell/1.3.0 \
-    crate://crates.io/libc/0.2.113 \
+    crate://crates.io/libc/0.2.119 \
+    crate://crates.io/libc/0.2.120 \
     crate://crates.io/libloading/0.7.3 \
     crate://crates.io/log/0.4.14 \
     crate://crates.io/memchr/2.4.1 \
     crate://crates.io/memoffset/0.6.5 \
     crate://crates.io/minimal-lexical/0.2.1 \
+    crate://crates.io/nix/0.22.3 \
     crate://crates.io/nix/0.23.1 \
-    crate://crates.io/nom/7.1.0 \
+    crate://crates.io/nom/7.1.1 \
+    crate://crates.io/num_threads/0.1.5 \
+    crate://crates.io/once_cell/1.10.0 \
     crate://crates.io/peeking_take_while/0.1.2 \
     crate://crates.io/proc-macro2/1.0.36 \
     crate://crates.io/quote/1.0.15 \
-    crate://crates.io/regex/1.5.4 \
+    crate://crates.io/redox_syscall/0.2.11 \
+    crate://crates.io/redox_users/0.4.0 \
+    crate://crates.io/regex/1.5.5 \
     crate://crates.io/regex-syntax/0.6.25 \
     crate://crates.io/rustc-hash/1.1.0 \
+    crate://crates.io/rustversion/1.0.6 \
     crate://crates.io/shlex/1.1.0 \
+    crate://crates.io/slog/2.7.0 \
+    crate://crates.io/slog-scope/4.4.0 \
+    crate://crates.io/slog-stdlog/4.1.0 \
+    crate://crates.io/slog-term/2.9.0 \
     crate://crates.io/strsim/0.8.0 \
-    crate://crates.io/termcolor/1.1.2 \
+    crate://crates.io/syn/1.0.89 \
+    crate://crates.io/term/0.7.0 \
+    crate://crates.io/termcolor/1.1.3 \
     crate://crates.io/textwrap/0.11.0 \
+    crate://crates.io/thiserror/1.0.30 \
+    crate://crates.io/thiserror-impl/1.0.30 \
+    crate://crates.io/thread_local/1.1.4 \
+    crate://crates.io/time/0.3.7 \
+    crate://crates.io/time-macros/0.2.3 \
     crate://crates.io/unicode-width/0.1.9 \
     crate://crates.io/unicode-xid/0.2.2 \
     crate://crates.io/vec_map/0.8.2 \
     crate://crates.io/version_check/0.9.4 \
-    crate://crates.io/which/4.2.2 \
+    crate://crates.io/wasi/0.10.2+wasi-snapshot-preview1 \
+    crate://crates.io/which/4.2.4 \
     crate://crates.io/winapi/0.3.9 \
     crate://crates.io/winapi-i686-pc-windows-gnu/0.4.0 \
     crate://crates.io/winapi-util/0.1.5 \
@@ -68,7 +93,7 @@ SRC_URI += " \
 
 # FIXME: update generateme with the real MD5 of the license file
 LIC_FILES_CHKSUM = " \
-    file://LICENSE;md5=7f1334dd1e14538c04459a14668b5934 \
+    file://LICENSE;md5=f982a876844f6074a1215ea86f512c07 \
 "
 
 SUMMARY = "Simple application to attempt to initialize egl with gbm/drm/kms"
