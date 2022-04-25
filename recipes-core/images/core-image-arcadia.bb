@@ -14,6 +14,10 @@ IMAGE_FEATURES += " splash"
 
 #CORE_IMAGE_BASE_INSTALL += " wayland htop ldd "
 
+KERNEL_FEATURES:append:qemuall=" cfg/virtio.scc features/drm-bochs/drm-bochs.scc"
+KERNEL_FEATURES:append:qemux86=" cfg/sound.scc cfg/paravirt_kvm.scc"
+KERNEL_FEATURES:append:qemux86-64=" cfg/sound.scc cfg/paravirt_kvm.scc"
+
 #SDL Test Samples
 #IMAGE_INSTALL:append = " sdltutorials"
 
