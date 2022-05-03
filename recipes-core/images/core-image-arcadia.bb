@@ -4,8 +4,42 @@ LICENSE = "MIT"
 inherit core-image
 
 IMAGE_INSTALL = "packagegroup-core-boot ${CORE_IMAGE_EXTRA_INSTALL} kmscube hello-rs glplay-rs "
-IMAGE_INSTALL:append:qemux86-64=" openssh openssh-sftp openssh-sftp-server packagegroup-core-buildessential ninja vim git curl wget htop iftop libtool ldd bash"
-
+IMAGE_INSTALL:append:qemux86-64=" \
+  openssh \
+  openssh-sftp \
+  openssh-sftp-server \
+  packagegroup-core-buildessential \
+  ninja \
+  vim \
+  git \
+  curl \
+  wget \
+  htop \
+  iftop \
+  libtool \
+  ldd \
+  bash
+  coreutils \
+  e2fsprogs \
+  e2fsprogs-resize2fs \
+  e2fsprogs-tune2fs \
+  findutils \
+  gawk \
+  grep \
+  inetutils-ping \
+  inetutils-ping6 \
+  inetutils-traceroute \
+  iproute2 \
+  less \
+  net-tools \
+  parted \
+  pciutils \
+  procps \
+  sed \
+  util-linux \
+  which \
+  head \
+  tail \"
 #IMAGE_FEATURES += "splash debug-tweaks tools-debug package-management ssh-server-dropbear hwcodecs"
 IMAGE_FEATURES += " splash"
 #DISTRO_FEATURES += " opengl wayland "
