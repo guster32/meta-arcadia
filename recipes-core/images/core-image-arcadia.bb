@@ -37,9 +37,7 @@ IMAGE_INSTALL:append:qemux86-64=" \
   procps \
   sed \
   util-linux \
-  which \
-  tail \
-  mktemp "
+  which "
 #IMAGE_FEATURES += "splash debug-tweaks tools-debug package-management ssh-server-dropbear hwcodecs"
 IMAGE_FEATURES += " splash"
 #DISTRO_FEATURES += " opengl wayland "
