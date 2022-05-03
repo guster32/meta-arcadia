@@ -26,10 +26,6 @@ IMAGE_INSTALL:append:qemux86-64=" \
   findutils \
   gawk \
   grep \
-  inetutils-ping \
-  inetutils-ping6 \
-  inetutils-traceroute \
-  iproute2 \
   less \
   net-tools \
   parted \
