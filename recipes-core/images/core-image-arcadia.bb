@@ -38,7 +38,6 @@ IMAGE_INSTALL:append:qemux86-64=" \
   sed \
   util-linux \
   which \
-  head \
   tail \
   mktemp "
 #IMAGE_FEATURES += "splash debug-tweaks tools-debug package-management ssh-server-dropbear hwcodecs"
