@@ -3,7 +3,8 @@ LICENSE = "MIT"
 
 inherit core-image
 
-IMAGE_INSTALL = "packagegroup-core-boot ${CORE_IMAGE_EXTRA_INSTALL} kmscube hello-rs glplay-rs openssh openssh-sftp openssh-sftp-server"
+IMAGE_INSTALL = "packagegroup-core-boot ${CORE_IMAGE_EXTRA_INSTALL} kmscube hello-rs glplay-rs "
+IMAGE_INSTALL:append:qemux86-64=" openssh openssh-sftp openssh-sftp-server packagegroup-core-buildessential ninja llvm vim git"
 
 #IMAGE_FEATURES += "splash debug-tweaks tools-debug package-management ssh-server-dropbear hwcodecs"
 IMAGE_FEATURES += " splash"
