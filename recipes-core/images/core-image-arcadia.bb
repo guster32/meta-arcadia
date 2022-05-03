@@ -18,7 +18,7 @@ IMAGE_INSTALL:append:qemux86-64=" \
   iftop \
   libtool \
   ldd \
-  bash
+  bash \
   coreutils \
   e2fsprogs \
   e2fsprogs-resize2fs \
@@ -39,7 +39,8 @@ IMAGE_INSTALL:append:qemux86-64=" \
   util-linux \
   which \
   head \
-  tail \"
+  tail \
+  mktemp "
 #IMAGE_FEATURES += "splash debug-tweaks tools-debug package-management ssh-server-dropbear hwcodecs"
 IMAGE_FEATURES += " splash"
 #DISTRO_FEATURES += " opengl wayland "
