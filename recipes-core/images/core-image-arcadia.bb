@@ -4,7 +4,7 @@ LICENSE = "MIT"
 inherit core-image
 
 IMAGE_INSTALL = "packagegroup-core-boot ${CORE_IMAGE_EXTRA_INSTALL} kmscube hello-rs glplay-rs "
-IMAGE_ROOTFS_EXTRA_SPACE:append:qemux86-64 = "41943040"
+IMAGE_ROOTFS_EXTRA_SPACE:qemux86-64 = "41943040"
 IMAGE_INSTALL:append:qemux86-64=" \
   openssh \
   openssh-sftp \
