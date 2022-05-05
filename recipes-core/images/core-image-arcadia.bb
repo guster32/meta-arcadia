@@ -6,7 +6,7 @@ inherit core-image
 IMAGE_INSTALL = "packagegroup-core-boot ${CORE_IMAGE_EXTRA_INSTALL} kmscube hello-rs glplay-rs "
 
 #IMAGE_FEATURES += "splash debug-tweaks tools-debug package-management ssh-server-dropbear hwcodecs"
-IMAGE_FEATURES += " splash"
+IMAGE_FEATURES:append=" splash"
 #DISTRO_FEATURES += " opengl wayland "
 
 # Graphics and Audio
