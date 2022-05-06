@@ -1,7 +1,7 @@
-SUMMARY = "Basic KMS/DRM/GBM graphics image"
-LICENSE = "MIT"
+require core-image-arcadia.bb
 
-inherit core-image-arcadia
+SUMMARY = "Basic KMS/DRM/GBM graphics image for development"
+LICENSE = "MIT"
 
 IMAGE_FEATURES:append=" dev-pkgs"
 
@@ -11,7 +11,7 @@ IMAGE_INSTALL:append:qemux86-64=" \
   openssh-sftp \
   openssh-sftp-server \
   packagegroup-core-buildessential \
-  clang \
+  llvm \
   ninja \
   vim \
   git \
