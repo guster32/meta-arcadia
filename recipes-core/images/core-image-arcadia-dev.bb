@@ -11,8 +11,6 @@ IMAGE_INSTALL:append:qemux86-64=" \
   openssh-sftp \
   openssh-sftp-server \
   packagegroup-core-buildessential \
-  llvm \
-  clang \
   ninja \
   vim \
   git \
