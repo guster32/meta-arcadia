@@ -33,6 +33,7 @@ IMAGE_INSTALL:append:qemux86-64=" \
   ninja \
   clang \
   lldb \
+  lldb-server \
   vim \
   git \
   curl \
