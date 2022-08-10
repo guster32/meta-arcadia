@@ -14,6 +14,7 @@ IMAGE_INSTALL:append:qemux86-64=" \
   cmake \
   ninja \
   clang \
+  lldb \
   vim \
   git \
   curl \
