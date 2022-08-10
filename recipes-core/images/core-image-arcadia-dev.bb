@@ -7,13 +7,13 @@ IMAGE_FEATURES:append=" dev-pkgs"
 
 IMAGE_ROOTFS_EXTRA_SPACE:qemux86-64 = "41943040"
 EXTRA_IMAGE_FEATURES:append:qemux86-64="\
-      dbg-pkgs \       # adds -dbg packages for all installed packages and symbol information for debugging and profiling.
-      tools-debug \    # adds debugging tools like gdb and strace.
-      tools-profile \  # add profiling tools (oprofile, exmap, lttng valgrind (x86 only))
-      tools-testapps \ # add useful testing tools (ts_print, aplay, arecord etc.)
-      debug-tweaks \   # make image for suitable of development, like setting an empty root password
-      tools-sdk \      # OPTIONAL: adds development tools (gcc, make, pkgconfig, etc)  
-      dev-pkgs"        # OPTIONAL: adds -dev packages for all installed packages
+      dbg-pkgs \
+      tools-debug \
+      tools-profile \
+      tools-testapps \
+      debug-tweaks \
+      tools-sdk \
+      dev-pkgs"
 
 # Specifies to build packages with debugging information
 DEBUG_BUILD:qemux86-64="1"
