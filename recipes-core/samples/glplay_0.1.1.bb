@@ -11,4 +11,4 @@ S = "${WORKDIR}/git"
 
 inherit cmake
 
-EXTRA_OECMAKE = ""
+EXTRA_OECMAKE = " -DCMAKE_BUILD_TYPE=Debug "
