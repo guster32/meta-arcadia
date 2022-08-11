@@ -11,4 +11,4 @@ S = "${WORKDIR}/git"
 
 inherit cmake
 
-EXTRA_OECMAKE = " -DCMAKE_BUILD_TYPE=Debug "
+EXTRA_OECMAKE = "${@oe.utils.conditional("DEBUG_BUILD", "1", "-DCMAKE_BUILD_TYPE=Debug", "", d)}"

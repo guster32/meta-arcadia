@@ -11,6 +11,9 @@
 		},
 		{
 			"path": "../glplay-rs"
+		},
+		{
+			"path": "../scripts"
 		}
 	],
 	"settings": {}
