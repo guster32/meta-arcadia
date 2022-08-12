@@ -25,6 +25,8 @@ INHIBIT_PACKAGE_STRIP:qemux86-64="1"
 INHIBIT_PACKAGE_DEBUG_SPLIT:qemux86-64="1"
 
 IMAGE_INSTALL:append:qemux86-64=" \
+  python3 \
+  python3-pip \
   openssh \
   openssh-sftp \
   openssh-sftp-server \
