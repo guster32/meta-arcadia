@@ -4,16 +4,13 @@
 			"path": "."
 		},
 		{
-			"path": "../hello-rs"
-		},
-		{
 			"path": "../meta-odroid"
 		},
 		{
-			"path": "../glplay-rs"
+			"path": "../scripts"
 		},
 		{
-			"path": "../scripts"
+			"path": "../glplay"
 		}
 	],
 	"settings": {}
