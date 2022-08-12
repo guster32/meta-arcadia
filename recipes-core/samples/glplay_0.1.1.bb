@@ -15,3 +15,10 @@ DEBUG_OPTIONS = "-DCMAKE_BUILD_TYPE=DEBUG \
       -DCMAKE_CXX_FLAGS_DEBUG=\"-g -O0\""
 
 EXTRA_OECMAKE = "${@oe.utils.conditional("DEBUG_BUILD", "1", "${DEBUG_OPTIONS}", "", d)}"
+
+do_install:append() {
+      if [ ${DEBUG_BUILD} == "1" ]; then
+            install -d ${D} ${prefix}/src/debug/glplay/${PN}
+            install -m 644 ${S} ${prefix}/src/debug/glplay${PN}
+      fi
+}
