@@ -10,16 +10,18 @@ SRCREV = "9d4e6c64d021ba462613a2a2386c494b5dd27877"
 S = "${WORKDIR}/git"
 
 inherit cmake
-DEBUG_OPTIONS = "-DCMAKE_BUILD_TYPE=DEBUG \
-      -DCMAKE_C_FLAGS_DEBUG=\"-g -O0\" \
-      -DCMAKE_CXX_FLAGS_DEBUG=\"-g -O0\""
+DEBUG_OPTIONS = "-DCMAKE_BUILD_TYPE=DEBUG "
 
 EXTRA_OECMAKE = "${@oe.utils.conditional("DEBUG_BUILD", "1", "${DEBUG_OPTIONS}", "", d)}"
 
 do_install:append() {
-      if [ ${DEBUG_BUILD} = "1" ]; then
+      if [ ${DEBUG_BUILD} = 1 ]; then
             #Recurse the source code dir '${S}' and recreate path with source files. 
-            IMG_DIR=${D}${bindir}/../src/debug/${PN}/${PV}-${PR}/git/
-            for f in $(find ${S}/ -type f -printf "%P\n"); do install -d $IMG_DIR/$(dirname ${f}); install -m 0644 ${S}/${f} $IMG_DIR/$(dirname ${f})/$(basename ${f}); done
+            IMG_DIR=${bindir}/../src/debug/${PN}/${PV}-${PR}/git/
+            for f in $(find ${S}/ -type f -printf "%P\n"); do
+                  install -d $IMG_DIR/$(dirname ${f});
+                  FILES_${PN} += $IMG_DIR/$(dirname ${f})/$(basename ${f}
+                  install -m 0644 ${S}/${f} ${D}$IMG_DIR/$(dirname ${f})/$(basename ${f})
+            done
       fi
 }

@@ -8,9 +8,6 @@
 		},
 		{
 			"path": "../scripts"
-		},
-		{
-			"path": "../glplay"
 		}
 	],
 	"settings": {}

@@ -15,18 +15,10 @@ EXTRA_IMAGE_FEATURES:append:qemux86-64="\
       tools-sdk \
       dev-pkgs"
 
-# Specifies to build packages with debugging information
-DEBUG_BUILD:qemux86-64="1"
-
-# Do not remove debug symbols
-INHIBIT_PACKAGE_STRIP:qemux86-64="1"
-
-# OPTIONAL: Do not split debug symbols in a separate file
-INHIBIT_PACKAGE_DEBUG_SPLIT:qemux86-64="1"
-
 IMAGE_INSTALL:append:qemux86-64=" \
   python3 \
   python3-pip \
+  python-six \
   openssh \
   openssh-sftp \
   openssh-sftp-server \
