@@ -18,7 +18,8 @@ EXTRA_OECMAKE = "${@oe.utils.conditional("DEBUG_BUILD", "1", "${DEBUG_OPTIONS}",
 
 do_install:append() {
       if [ ${DEBUG_BUILD} = "1" ]; then
-            install -d ${D} ${prefix}/src/debug/glplay/${PN}
-            install -m 644 ${S} ${prefix}/src/debug/glplay/${PN}/
+            #Recurse the source code dir '${S}' and recreate path with source files. 
+            IMG_DIR=${D}${bindir}/../src/debug/${PN}/${PV}-${PR}/git/
+            for f in $(find ${S}/ -type f -printf "%P\n"); do install -d $IMG_DIR/$(dirname ${f}); install -m 0644 ${S}/${f} $IMG_DIR/$(dirname ${f})/$(basename ${f}); done
       fi
 }
