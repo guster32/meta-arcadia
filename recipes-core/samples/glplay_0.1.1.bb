@@ -19,8 +19,8 @@ do_install:append() {
             #Recurse the source code dir '${S}' and recreate path with source files. 
             IMG_DIR=${bindir}/../src/debug/${PN}/${PV}-${PR}/git/
             for f in $(find ${S}/ -type f -printf "%P\n"); do
-                  install -d $IMG_DIR/$(dirname ${f});
-                  FILES_${PN} += $IMG_DIR/$(dirname ${f})/$(basename ${f}
+                  install -d $IMG_DIR/$(dirname ${f})
+                  FILES_${PN} += $IMG_DIR/$(dirname ${f})/$(basename ${f})
                   install -m 0644 ${S}/${f} ${D}$IMG_DIR/$(dirname ${f})/$(basename ${f})
             done
       fi
