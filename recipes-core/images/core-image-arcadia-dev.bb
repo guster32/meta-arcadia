@@ -18,7 +18,7 @@ EXTRA_IMAGE_FEATURES:append:qemux86-64="\
 IMAGE_INSTALL:append:qemux86-64=" \
   python3 \
   python3-pip \
-  python-six \
+  python3-six \
   openssh \
   openssh-sftp \
   openssh-sftp-server \
