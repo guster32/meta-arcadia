@@ -15,10 +15,10 @@ EXTRA_IMAGE_FEATURES:append:qemux86-64="\
       tools-sdk \
       dev-pkgs"
 
-# python3-six 
 IMAGE_INSTALL:append:qemux86-64=" \
   python3 \
   python3-pip \
+  python3-six \
   openssh \
   openssh-sftp \
   openssh-sftp-server \
