@@ -9,7 +9,6 @@ IMAGE_ROOTFS_EXTRA_SPACE:qemux86-64 = "41943040"
 EXTRA_IMAGE_FEATURES:append:qemux86-64="\
       dbg-pkgs \
       tools-debug \
-      tools-profile \
       tools-testapps \
       debug-tweaks \
       tools-sdk \
@@ -28,6 +27,7 @@ IMAGE_INSTALL:append:qemux86-64=" \
   clang \
   lldb \
   lldb-server \
+  valgrind \
   vim \
   git \
   curl \
