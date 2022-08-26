@@ -14,13 +14,3 @@ DEBUG_OPTIONS = "-DCMAKE_BUILD_TYPE=DEBUG "
 
 EXTRA_OECMAKE = "${@oe.utils.conditional("DEBUG_BUILD", "1", "${DEBUG_OPTIONS}", "", d)}"
 
-do_install:append() {
-      if [ ${DEBUG_BUILD} = 1 ]; then
-            #Recurse the source code dir '${S}' and recreate path with source files. 
-            IMG_DIR=${bindir}/../src/debug/${PN}/${PV}-${PR}/git/
-            for f in $(find ${S}/ -type f -printf "%P\n"); do
-                  install -d ${D}/$IMG_DIR/$(dirname ${f})
-                  install -m 0644 ${S}/${f} ${D}$IMG_DIR/$(dirname ${f})/$(basename ${f})
-            done
-      fi
-}
