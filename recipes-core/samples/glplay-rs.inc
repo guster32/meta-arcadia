@@ -1,1 +1,0 @@
-DEPENDS += "mesa libdrm virtual/libgbm"
