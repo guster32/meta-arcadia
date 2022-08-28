@@ -3,7 +3,7 @@ LICENSE = "MIT"
 
 inherit core-image
 
-CORE_IMAGE_EXTRA_INSTALL:append="packagegroup-core-boot glplay"
+CORE_IMAGE_EXTRA_INSTALL:append=" packagegroup-core-boot glplay "
 
 IMAGE_FEATURES:append=" splash"
 
