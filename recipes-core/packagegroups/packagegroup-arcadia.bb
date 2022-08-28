@@ -1,21 +1,16 @@
 DESCRIPTION = "Arcadia packagegroups"
-SUMMARY = "Arcadia packagegroup - for development"
-
-PACKAGE_ARCH = "${MACHINE_ARCH}"
 
 inherit packagegroup
 
-
 PACKAGES = "\
-  packagegroup-lldb \
-  packagegroup-testapps \
-"
+  ${PN}-apps \
+  ${PN}-tools"
 
-RDEPENDS_packagegroup-lldb = "\
+RDEPENDS:${PN}-apps = "kmscube"
+
+RDEPENDS:${PN}-tools = "\
   python3 \
   python3-pip \
   python3-six \
   lldb \
   lldb-server"
-
-RDEPENDS_packagegroup-testapps = "kmscube"
