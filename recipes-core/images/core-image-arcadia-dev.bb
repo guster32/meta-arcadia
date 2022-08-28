@@ -8,7 +8,13 @@ IMAGE_FEATURES:append="\
   tools-debug \
   debug-tweaks"
 
-CORE_IMAGE_EXTRA_INSTALL:append=" packagegroup-testapps packagegroup-lldb "
+IMAGE_INSTALL:append="\
+  python3 \
+  python3-pip \
+  python3-six \
+  lldb \
+  lldb-server \
+  kmscube"
 
 COMPATIBLE_MACHINE = "odroid-xu4|qemuarm|qemux86-64|rockpi-4-rk3399i|jetson-nano-qspi-sd"
 
