@@ -6,7 +6,7 @@ PACKAGES = "\
   ${PN}-apps \
   ${PN}-tools"
 
-RDEPENDS:${PN}-apps = "kmscube"
+RDEPENDS:${PN}-apps = " kmscube "
 
 RDEPENDS:${PN}-tools = "\
   python3 \
