@@ -3,7 +3,7 @@ require core-image-arcadia.bb
 SUMMARY = "Basic KMS/DRM/GBM graphics image for development"
 LICENSE = "MIT"
 
-IMAGE_INSTALL:append="\
+IMAGE_FEATURES:append="\
   ssh-server-dropbear \
   tools-debug \
   debug-tweaks"
