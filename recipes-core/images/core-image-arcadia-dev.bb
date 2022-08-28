@@ -1,4 +1,4 @@
-require core-image-arcadia.bb
+inherit core-image-arcadia.bb
 
 SUMMARY = "Basic KMS/DRM/GBM graphics image for development"
 LICENSE = "MIT"
