@@ -4,9 +4,6 @@ SUMMARY = "Basic KMS/DRM/GBM graphics image for development"
 LICENSE = "MIT"
 
 IMAGE_FEATURES:append="\
-  openssh \
-  openssh-sftp \
-  openssh-sftp-server \
   tools-debug \
   debug-tweaks"
 
