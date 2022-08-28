@@ -11,6 +11,7 @@ S = "${WORKDIR}/git"
 
 inherit cmake
 DEBUG_OPTIONS = "-DCMAKE_BUILD_TYPE=DEBUG "
-
-EXTRA_OECMAKE = "${@oe.utils.conditional("DEBUG_BUILD", "1", "${DEBUG_OPTIONS}", "", d)}"
+CMAKE_CXX_COMPILER ="-DCMAKE_CXX_COMPILER /usr/bin/clang++"
+CMAKE_C_COMPILER ="-DCMAKE_C_COMPILER /usr/bin/clang"
+EXTRA_OECMAKE = "${@oe.utils.conditional("DEBUG_BUILD", "1", "${CMAKE_CXX_COMPILER} ${CMAKE_C_COMPILER} ${DEBUG_OPTIONS}", "${CMAKE_CXX_COMPILER} ${CMAKE_C_COMPILER}", d)}"
 
