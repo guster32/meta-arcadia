@@ -4,6 +4,7 @@ SUMMARY = "Basic KMS/DRM/GBM graphics image for development"
 LICENSE = "MIT"
 
 IMAGE_FEATURES:append="\
+  pkgconfig \
   tools-debug \
   debug-tweaks"
 
