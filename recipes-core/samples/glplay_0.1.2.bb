@@ -3,7 +3,7 @@ SECTION = "Sample"
 LICENSE = "MIT"
 HOMEPAGE = "https://github.com/guster32/glplay"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=84f20c3b625ccbba2d4fb9c7ba68e9f1"
-DEPENDS += " pkgconfig-native mesa libdrm virtual/egl virtual/libgles3 virtual/libgbm"
+DEPENDS += " pkgconfig-native mesa libdrm virtual/egl virtual/libgles3 virtual/libgles2 virtual/libgbm"
 
 inherit cmake pkgconfig
 
