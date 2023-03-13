@@ -12,7 +12,7 @@ inherit cmake pkgconfig
 TOOLCHAIN = "clang"
 
 SRC_URI += "git://git@github.com/guster32/glplay.git;protocol=ssh;nobranch=1;branch=main"
-SRCREV = "af157e1616b37774c51e3b950953fd855a889b5d"
+SRCREV = "8bee19861017df1a6089784daa788018d9e2e8e7"
 S = "${WORKDIR}/git"
 
 DEBUG_OPTIONS = "-DCMAKE_BUILD_TYPE=DEBUG "
