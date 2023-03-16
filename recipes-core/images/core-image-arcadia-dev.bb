@@ -8,7 +8,7 @@ IMAGE_FEATURES:append="\
   tools-debug \
   debug-tweaks"
 
-IMAGE_INSTALL:append=" mesa libgles3-mesa libgles3-mesa-dev pkgconfig packagegroup-arcadia-apps packagegroup-arcadia-tools "
+IMAGE_INSTALL:append=" mesa libgles2-mesa libgles2-mesa-dev pkgconfig packagegroup-arcadia-apps packagegroup-arcadia-tools "
 
 COMPATIBLE_MACHINE = "odroid-xu4|qemuarm|qemux86-64|rockpi-4-rk3399i|jetson-nano-qspi-sd"
 
