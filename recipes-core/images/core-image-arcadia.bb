@@ -7,6 +7,8 @@ CORE_IMAGE_EXTRA_INSTALL:append=" packagegroup-core-boot glplay "
 
 IMAGE_FEATURES:append=" splash"
 
+IMAGE_INSTALL:append=" mesa libgbm libgles1-mesa libgles2-mesa "
+
 KERNEL_FEATURES:append:qemuall=" cfg/virtio.scc features/drm-bochs/drm-bochs.scc"
 KERNEL_FEATURES:append:qemux86=" cfg/sound.scc cfg/paravirt_kvm.scc"
 KERNEL_FEATURES:append:qemux86-64=" cfg/sound.scc cfg/paravirt_kvm.scc"
