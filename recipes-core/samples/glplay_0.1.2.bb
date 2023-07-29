@@ -12,11 +12,12 @@ inherit cmake pkgconfig
 TOOLCHAIN = "clang"
 
 SRC_URI += "git://git@github.com/guster32/glplay.git;protocol=ssh;nobranch=1;branch=main"
-SRCREV = "88c534cb4581eab15c79c4805975c557d1cc50f2"
+SRCREV = "162ac21de03d1c0e6c36a3169a955e8cb83391e9"
 S = "${WORKDIR}/git"
 
+CMAKE_CXX_FLAGS += " -D__GBM__ "
 DEBUG_OPTIONS = "-DCMAKE_BUILD_TYPE=DEBUG "
 CMAKE_CXX_COMPILER ="-DCMAKE_CXX_COMPILER=/usr/bin/clang++"
 CMAKE_C_COMPILER ="-DCMAKE_C_COMPILER=/usr/bin/clang"
-EXTRA_OECMAKE = "${@oe.utils.conditional("DEBUG_BUILD", "1", "${CMAKE_CXX_COMPILER} ${CMAKE_C_COMPILER} ${DEBUG_OPTIONS}", "${CMAKE_CXX_COMPILER} ${CMAKE_C_COMPILER}", d)}"
+EXTRA_OECMAKE = "${@oe.utils.conditional("DEBUG_BUILD", "1", " ${CMAKE_CXX_FLAGS} ${CMAKE_CXX_COMPILER} ${CMAKE_C_COMPILER} ${DEBUG_OPTIONS}", ${CMAKE_CXX_FLAGS} "${CMAKE_CXX_COMPILER} ${CMAKE_C_COMPILER}", d)}"
 
