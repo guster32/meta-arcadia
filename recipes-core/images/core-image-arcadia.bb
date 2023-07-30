@@ -4,7 +4,7 @@ LICENSE = "MIT"
 inherit core-image
 
 CORE_IMAGE_EXTRA_INSTALL:append=" packagegroup-core-boot glplay "
-
+CORE_IMAGE_EXTRA_INSTALL:remove:odroid-xu4=" glplay "
 IMAGE_FEATURES:append=" splash"
 
 IMAGE_INSTALL:append=" mesa libgbm "
