@@ -8,7 +8,7 @@ CORE_IMAGE_EXTRA_INSTALL:remove:odroid-xu4=" glplay "
 IMAGE_FEATURES:append=" splash"
 
 IMAGE_INSTALL:append=" mesa libgbm "
-IMAGE_INSTALL:append:qemuall=" libgles1-mesa libgles2-mesa libgles3-mesa "
+IMAGE_INSTALL:append:qemuall=" libgles1-mesa libgles2-mesa "
 IMAGE_INSTALL:append:odroid-xu4=" wayland htop mali-t62x kmscube ldd "
 
 KERNEL_FEATURES:append:qemuall=" cfg/virtio.scc features/drm-bochs/drm-bochs.scc"
