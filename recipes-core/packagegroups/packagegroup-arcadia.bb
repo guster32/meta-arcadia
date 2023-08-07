@@ -2,18 +2,43 @@ DESCRIPTION = "Arcadia packagegroups"
 
 inherit packagegroup
 
-PACKAGES = "\
-  ${PN}-apps \
-  ${PN}-tools"
+PACKAGES = " \
+  ${PN}-core \
+  ${PN}-networking \
+  ${PN}-devtools "
 
-RDEPENDS:${PN}-apps = " kmscube "
+#   mesa 
+RDEPENDS:${PN}-core = " \ 
+  libgbm \
+  systemd \
+  shadow \
+  bash \
+  bash-completion \
+  coreutils \
+  inetutils \
+  iputils \
+  procps \
+  util-linux \
+  net-tools "
 
-RDEPENDS:${PN}-tools = "\
+
+RDEPENDS:${PN}-networking = " \
+  dhcpcd \
+  wpa-supplicant \
+  iw \
+  linux-firmware \
+  linux-firmware-rt2870 \
   openssh \
   openssh-sftp \
-  openssh-sftp-server \
+  openssh-sftp-server "
+
+# kmscube 
+RDEPENDS:${PN}-devtools = " \
+  vim \
+  ldd \
+  htop \
   python3 \
   python3-pip \
   python3-six \
   lldb \
-  lldb-server"
+  lldb-server "

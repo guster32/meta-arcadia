@@ -3,14 +3,29 @@ LICENSE = "MIT"
 
 inherit core-image
 
-CORE_IMAGE_EXTRA_INSTALL:append=" packagegroup-core-boot glplay "
-CORE_IMAGE_EXTRA_INSTALL:remove:odroid-xu4 = " glplay "
-IMAGE_FEATURES:append=" splash"
+IMAGE_FEATURES:append = " splash "
+IMAGE_INSTALL:append=" \
+  glplay \
+  packagegroup-core-boot \
+  packagegroup-arcadia-core \
+  packagegroup-arcadia-networking"
 
-IMAGE_INSTALL:append=" mesa libgbm "
+IMAGE_INSTALL:remove = " busybox sysvinit "
+
+#This line prevents the build from falling back to using SysVinit when systemd is not available
+PREFERRED_PROVIDER_virtual/bootloader = ""
+PREFERRED_PROVIDER_virtual/libintl = "glibc"
+#This tells Yocto to use bash
+PREFERRED_PROVIDER_virtual/${TARGET_PREFIX}bash ?= "bash"
+
+
+# ODROID TWEAKS
+#DISTRO_FEATURES:append:odroid-xu4 = " wayland "
+IMAGE_INSTALL:append:odroid-xu4 = " mali-t62x "
+IMAGE_INSTALL:remove:odroid-xu4 = " glplay "
+
+# QEMU TWEAKS
 IMAGE_INSTALL:append:qemuall=" libgles1-mesa libgles2-mesa "
-IMAGE_INSTALL:append:odroid-xu4=" wayland htop mali-t62x kmscube ldd "
-
 KERNEL_FEATURES:append:qemuall=" cfg/virtio.scc features/drm-bochs/drm-bochs.scc"
 KERNEL_FEATURES:append:qemux86=" cfg/sound.scc cfg/paravirt_kvm.scc"
 KERNEL_FEATURES:append:qemux86-64=" cfg/sound.scc cfg/paravirt_kvm.scc"
