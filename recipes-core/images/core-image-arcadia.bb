@@ -25,7 +25,6 @@ IMAGE_INSTALL:append:odroid-xu4 = " mali-t62x "
 IMAGE_INSTALL:remove:odroid-xu4 = " glplay "
 
 # QEMU TWEAKS
-DISTRO_FEATURES:append:qemuall = " opengl "
 IMAGE_INSTALL:append:qemuall=" libgles1-mesa libgles2-mesa "
 KERNEL_FEATURES:append:qemuall=" cfg/virtio.scc features/drm-bochs/drm-bochs.scc"
 KERNEL_FEATURES:append:qemux86=" cfg/sound.scc cfg/paravirt_kvm.scc"
