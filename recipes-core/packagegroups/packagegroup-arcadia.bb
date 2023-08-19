@@ -7,8 +7,8 @@ PACKAGES = " \
   ${PN}-networking \
   ${PN}-devtools "
 
-#   mesa 
-RDEPENDS:${PN}-core = " \ 
+#   mesa
+RDEPENDS:${PN}-core = " \
   libgbm \
   systemd \
   shadow \
@@ -32,8 +32,8 @@ RDEPENDS:${PN}-networking = " \
   openssh-sftp \
   openssh-sftp-server "
 
-# kmscube 
 RDEPENDS:${PN}-devtools = " \
+  kmscube \
   vim \
   ldd \
   htop \
