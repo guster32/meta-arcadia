@@ -7,7 +7,6 @@ PACKAGES = " \
   ${PN}-networking \
   ${PN}-devtools "
 
-#   mesa
 RDEPENDS:${PN}-core = " \
   libgbm \
   systemd \
