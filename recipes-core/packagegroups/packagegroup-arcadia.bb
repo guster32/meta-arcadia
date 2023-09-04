@@ -24,6 +24,10 @@ RDEPENDS:${PN}-core = " \
 RDEPENDS:${PN}-networking = " \
   dhcpcd \
   wpa-supplicant \
+  wpa-supplicant-passphrase \
+  wpa-supplicant-cli \
+  wpa-supplicant-plugins \
+  wireless-init \
   iw \
   linux-firmware \
   linux-firmware-rt2870 \
@@ -34,6 +38,11 @@ RDEPENDS:${PN}-networking = " \
 RDEPENDS:${PN}-devtools = " \
   kmscube \
   vim \
+  vim-syntax \
+  vim-help \
+  vim-tutor \
+  vim-vimrc \
+  vim-common \
   ldd \
   htop \
   python3 \
