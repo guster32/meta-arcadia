@@ -6,6 +6,7 @@ inherit core-image
 IMAGE_FEATURES:append = " splash "
 IMAGE_INSTALL:append=" \
   glplay \
+  hello-rs \
   packagegroup-core-boot \
   packagegroup-arcadia-core \
   packagegroup-arcadia-networking"
