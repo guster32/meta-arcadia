@@ -49,4 +49,6 @@ RDEPENDS:${PN}-devtools = " \
   python3-pip \
   python3-six \
   lldb \
-  lldb-server "
+  lldb-server \
+  rust \
+  rust-dev "
