@@ -8,20 +8,32 @@ PACKAGES = " \
   ${PN}-devtools "
 
 RDEPENDS:${PN}-core = " \
-  libgbm \
   systemd \
   shadow \
   bash \
   bash-completion \
   coreutils \
-  inetutils \
-  iputils \
   procps \
-  util-linux \
-  net-tools "
+  util-linux "
+
+RDEPENDS:${PN}-graphics = " \
+  libgbm \
+  libdrm \
+	hwdata-native \
+	libdisplay-info \
+	libliftoff \
+	libxkbcommon \
+	pixman \
+	seatd \
+	wayland \
+	wayland-native \
+	wayland-protocols "
 
 
 RDEPENDS:${PN}-networking = " \
+  net-tools \
+  inetutils \
+  iputils \
   dhcpcd \
   wpa-supplicant \
   wpa-supplicant-passphrase \
