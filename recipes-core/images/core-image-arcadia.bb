@@ -4,9 +4,9 @@ LICENSE = "MIT"
 inherit core-image
 
 IMAGE_FEATURES:append = " splash "
+#wlroots
 IMAGE_INSTALL:append=" \
   glplay \
-  wlroots \
   hello-rs \
   packagegroup-core-boot \
   packagegroup-arcadia-core \
