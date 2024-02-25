@@ -47,6 +47,10 @@ RDEPENDS:${PN}-networking = " \
   openssh-sftp \
   openssh-sftp-server "
 
+RDEPENDS:${PN}-emulators = " \
+  mamedev \
+"
+
 RDEPENDS:${PN}-devtools = " \
   kmscube \
   vim \

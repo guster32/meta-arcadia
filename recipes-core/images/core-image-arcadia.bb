@@ -10,6 +10,7 @@ IMAGE_INSTALL:append=" \
   hello-rs \
   packagegroup-core-boot \
   packagegroup-arcadia-core \
+  packagegroup-arcadia-emulators \
   packagegroup-arcadia-networking"
 
 IMAGE_INSTALL:remove = " busybox sysvinit "
