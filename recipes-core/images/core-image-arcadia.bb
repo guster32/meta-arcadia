@@ -4,13 +4,14 @@ LICENSE = "MIT"
 inherit core-image
 
 IMAGE_FEATURES:append = " splash "
-#wlroots
+
 IMAGE_INSTALL:append=" \
   glplay \
   hello-rs \
   packagegroup-core-boot \
   packagegroup-arcadia-core \
   packagegroup-arcadia-emulators \
+  packagegroup-arcadia-graphics \
   packagegroup-arcadia-networking"
 
 IMAGE_INSTALL:remove = " busybox sysvinit "

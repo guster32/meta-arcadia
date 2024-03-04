@@ -5,6 +5,8 @@ inherit packagegroup
 PACKAGES = " \
   ${PN}-core \
   ${PN}-networking \
+  ${PN}-emulators \
+  ${PN}-graphics \
   ${PN}-devtools "
 
 RDEPENDS:${PN}-core = " \
@@ -17,16 +19,11 @@ RDEPENDS:${PN}-core = " \
   util-linux "
 
 RDEPENDS:${PN}-graphics = " \
-  libgbm \
-  libdrm \
-	hwdata-native \
 	libdisplay-info \
-	libliftoff \
-	libxkbcommon \
-	pixman \
 	seatd \
+  wlroots \
 	wayland \
-	wayland-native \
+  weston \
 	wayland-protocols "
 
 
