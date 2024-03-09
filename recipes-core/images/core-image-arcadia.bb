@@ -3,7 +3,8 @@ LICENSE = "MIT"
 
 inherit core-image
 
-IMAGE_FEATURES:append = " splash "
+#weston x11-base
+IMAGE_FEATURES:append = " splash x11 x11-sato"
 
 IMAGE_INSTALL:append=" \
   glplay \

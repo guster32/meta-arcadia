@@ -16,7 +16,14 @@ RDEPENDS:${PN}-core = " \
   bash-completion \
   coreutils \
   procps \
-  util-linux "
+  util-linux \
+  xserver-xorg \
+  dbus \
+  alsa-lib \
+  alsa-utils \
+  pulseaudio-module-dbus-protocol \
+  pulseaudio-server \
+  pulseaudio "
 
 RDEPENDS:${PN}-graphics = " \
 	libdisplay-info \
