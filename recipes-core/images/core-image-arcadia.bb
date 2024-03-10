@@ -3,8 +3,7 @@ LICENSE = "MIT"
 
 inherit core-image
 
-#weston x11-base
-IMAGE_FEATURES:append = " splash x11 x11-sato"
+IMAGE_FEATURES:append = " splash "
 
 IMAGE_INSTALL:append=" \
   glplay \
@@ -26,6 +25,8 @@ PREFERRED_PROVIDER_virtual/${TARGET_PREFIX}bash ?= "bash"
 
 # ODROID TWEAKS
 IMAGE_INSTALL:remove:odroid-xu4 = " glplay "
+IMAGE_INSTALL:remove:odroid-xu4 = " wlroots "
+IMAGE_INSTALL:remove:odroid-xu4 = " mamedev "
 
 # QEMU TWEAKS
 IMAGE_INSTALL:append:qemuall=" mesa libgles1-mesa libgles2-mesa "

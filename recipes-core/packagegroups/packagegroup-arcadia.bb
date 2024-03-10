@@ -17,13 +17,12 @@ RDEPENDS:${PN}-core = " \
   coreutils \
   procps \
   util-linux \
-  xserver-xorg \
-  dbus \
-  alsa-lib \
   alsa-utils \
-  pulseaudio-module-dbus-protocol \
+  pulseaudio \
+  pulseaudio-misc \
   pulseaudio-server \
-  pulseaudio "
+  pulseaudio-module-dbus-protocol \
+  "
 
 RDEPENDS:${PN}-graphics = " \
 	libdisplay-info \

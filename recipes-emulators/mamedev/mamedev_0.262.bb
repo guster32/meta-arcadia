@@ -8,7 +8,7 @@ LIC_FILES_CHKSUM = "file://COPYING;md5=222e4e1f9eaa57231d077ef8099f5b83"
 DEPENDS += " virtual/egl virtual/libgles2 virtual/libgles3 virtual/libgbm libsdl2 libsdl2-image libsdl2-ttf alsa-lib fontconfig pulseaudio "
 
 #Only needed when building for x11 ?
-DEPENDS += " libxinerama qtbase qtbase-native  "
+#DEPENDS += " libxinerama qtbase qtbase-native  "
 
 PACKAGECONFIG[gles3] = "virtual/libgles3"
 
@@ -22,8 +22,11 @@ export OVERRIDE_LD = "${LD}"
 export OVERRIDE_AR = "${AR}"
 #export SDL_INI_PATH = "${datadir}/konami/ini"
 
-#EXTRA_OEMAKE += " CROSS_BUILD=1 USE_WAYLAND=1 NO_X11=1 NO_USE_XINPUT=1 SUBTARGET=konami SOURCES=src/mame/konami "
-EXTRA_OEMAKE += " CROSS_BUILD=1 SUBTARGET=konami SOURCES=src/mame/konami "
+#This is how we would build wayland support only
+EXTRA_OEMAKE += " OPTIMIZE=3 CROSS_BUILD=1 USE_WAYLAND=1 NO_X11=1 NO_USE_XINPUT=1 SUBTARGET=konami SOURCES=src/mame/konami "
+
+#This how you would build x11
+#EXTRA_OEMAKE += " CROSS_BUILD=1 SUBTARGET=konami SOURCES=src/mame/konami "
 
 SRC_URI += "git://git@github.com/mamedev/mame.git;protocol=ssh;nobranch=1;branch=mame0262"
 SRCREV = "d48a61f9210eb22ac54840995ea922a2daae7b09"
