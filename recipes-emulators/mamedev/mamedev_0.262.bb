@@ -22,8 +22,10 @@ export OVERRIDE_LD = "${LD}"
 export OVERRIDE_AR = "${AR}"
 #export SDL_INI_PATH = "${datadir}/konami/ini"
 
+# TODO: need a better way to do this.
+EXTRA_OEMAKE += " ${@bb.utils.contains('MACHINE', 'odroid-xu4', ' FORCE_DRC_C_BACKEND=1 BIGENDIAN=0 NOWERROR=1 ', '', d)}"
 #This is how we would build wayland support only
-EXTRA_OEMAKE += " OPTIMIZE=3 CROSS_BUILD=1 USE_WAYLAND=1 NO_X11=1 NO_USE_XINPUT=1 SUBTARGET=konami SOURCES=src/mame/konami "
+EXTRA_OEMAKE += " TARGETOS=linux OPTIMIZE=3 CROSS_BUILD=1 USE_WAYLAND=1 NO_X11=1 NO_USE_XINPUT=1 SUBTARGET=konami SOURCES=src/mame/konami "
 
 #This how you would build x11
 #EXTRA_OEMAKE += " CROSS_BUILD=1 SUBTARGET=konami SOURCES=src/mame/konami "
