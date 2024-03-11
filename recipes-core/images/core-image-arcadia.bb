@@ -26,7 +26,7 @@ PREFERRED_PROVIDER_virtual/${TARGET_PREFIX}bash ?= "bash"
 # ODROID TWEAKS
 IMAGE_INSTALL:remove:odroid-xu4 = " glplay "
 IMAGE_INSTALL:remove:odroid-xu4 = " wlroots "
-IMAGE_INSTALL:remove:odroid-xu4 = " mamedev "
+IMAGE_INSTALL:append:odroid-xu4 = " mali-t62x "
 
 # QEMU TWEAKS
 IMAGE_INSTALL:append:qemuall=" mesa libgles1-mesa libgles2-mesa "

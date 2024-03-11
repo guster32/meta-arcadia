@@ -5,7 +5,7 @@ LICENSE = "GPL-2.0"
 
 LIC_FILES_CHKSUM = "file://COPYING;md5=222e4e1f9eaa57231d077ef8099f5b83"
 
-DEPENDS += " virtual/egl virtual/libgles2 virtual/libgles3 virtual/libgbm libsdl2 libsdl2-image libsdl2-ttf alsa-lib fontconfig pulseaudio "
+DEPENDS += " libsdl2 libsdl2-image libsdl2-ttf alsa-lib fontconfig pulseaudio "
 
 #Only needed when building for x11 ?
 #DEPENDS += " libxinerama qtbase qtbase-native  "
@@ -26,6 +26,8 @@ export OVERRIDE_AR = "${AR}"
 EXTRA_OEMAKE += " ${@bb.utils.contains('MACHINE', 'odroid-xu4', ' FORCE_DRC_C_BACKEND=1 BIGENDIAN=0 NOWERROR=1 ', '', d)}"
 #This is how we would build wayland support only
 EXTRA_OEMAKE += " TARGETOS=linux OPTIMIZE=3 CROSS_BUILD=1 USE_WAYLAND=1 NO_X11=1 NO_USE_XINPUT=1 SUBTARGET=konami SOURCES=src/mame/konami "
+
+RDEPENDS:${PN}:odroid-xu4 += " mali-t62x "
 
 #This how you would build x11
 #EXTRA_OEMAKE += " CROSS_BUILD=1 SUBTARGET=konami SOURCES=src/mame/konami "
